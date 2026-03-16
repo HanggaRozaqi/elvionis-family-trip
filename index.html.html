@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Lebaran Family Trip 2026">
+<meta property="og:description" content="Itinerary Bandung – Lembang 2 Hari 1 Malam">
+<meta property="og:image" content="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/61/c5/5e/dusun-bambu.jpg">
+<meta property="og:type" content="website">
+
+<title>Itinerary Liburan Elvionis Fams – Lebaran 2026</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+
+body{
+background:linear-gradient(180deg,#0f5132,#f8f9fa);
+font-family:'Segoe UI',sans-serif;
+}
+
+.dark{
+background:#121212 !important;
+color:white;
+}
+
+.navbar{
+border-radius:14px;
+}
+
+.hero{
+position:relative;
+background:url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/61/c5/5e/dusun-bambu.jpg") center/cover;
+padding:140px 20px;
+text-align:center;
+color:white;
+border-radius:20px;
+margin-bottom:40px;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.35)
+);
+}
+
+.hero *{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-weight:800;
+font-size:42px;
+text-shadow:0 4px 10px rgba(0,0,0,0.7);
+}
+
+.card{
+border:none;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card img{
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+.section{
+margin-top:40px;
+}
+
+.timeline{
+border-left:4px solid #198754;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:18px;
+}
+
+.time{
+font-weight:bold;
+color:#198754;
+}
+
+/* .price{
+font-weight:bold;
+color:#0d6efd;
+} */
+
+.price{
+float:right;
+font-weight:600;
+color:#0d6efd;
+}
+
+.total{
+font-size:22px;
+font-weight:bold;
+color:#dc3545;
+}
+
+.swiper img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.progress-scroll{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#198754;
+width:0%;
+z-index:999;
+}
+
+.footer{
+text-align:center;
+margin-top:50px;
+padding:20px;
+color:white;
+}
+
+.vote-btn{
+margin:5px;
+}
+
+#weatherBox h5{
+font-weight:700;
+margin-bottom:5px;
+}
+
+#weatherBox p{
+margin-bottom:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress-scroll" id="progress"></div>
+
+<div class="container mt-3">
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-light shadow-sm p-2 mb-3">
+
+<div class="container-fluid">
+
+<a class="navbar-brand fw-bold">🌙 Trip Planner</a>
+
+<button onclick="toggleDark()" class="btn btn-dark btn-sm">
+<i class="bi bi-moon"></i>
+</button>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Lebaran Family Trip 2026</h1>
+
+<p>Bandung – Lembang</p>
+
+<p>22 – 23 Maret 2026 • 2 Hari 1 Malam</p>
+
+<p>👨‍👩‍👧‍👦 13 Dewasa + 7 Anak</p>
+
+<h4 id="countdown"></h4>
+
+</div>
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-cloud-sun"></i> Weather Bandung Saat Trip</h3>
+
+<div class="card p-4">
+
+<div id="weatherBox">
+Loading weather...
+</div>
+
+</div>
+
+</div>
+
+<!-- DAY 1 -->
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-calendar-event"></i> Hari 1 – Minggu</h3>
+
+<div class="card p-4">
+
+<div class="timeline">
+
+<div class="timeline-item"><span class="time">05:00</span> Sholat Subuh</div>
+
+<div class="timeline-item"><span class="time">05:30</span> Briefing perjalanan</div>
+
+<div class="timeline-item"><span class="time">10:30</span> Tiba di Bandung</div>
+
+<div class="timeline-item"><span class="time">11:30</span> Jalan santai Braga Street</div>
+
+<div class="timeline-item"><span class="time">13:00</span> Sholat Dzuhur – Masjid Raya Bandung</div>
+
+<div class="timeline-item"><span class="time">13:30</span> Makan siang sekitar Alun-Alun Bandung</div>
+
+<div class="timeline-item"><span class="time">14:30</span> Perjalanan menuju Lembang</div>
+
+<div class="timeline-item"><span class="time">15:00</span> Check-in Boni Castle Villa</div>
+
+<div class="timeline-item"><span class="time">16:00</span> Family Games</div>
+
+<div class="timeline-item"><span class="time">18:00</span> Sholat Maghrib</div>
+
+<div class="timeline-item"><span class="time">19:00</span> Makan malam bersama</div>
+
+<div class="timeline-item"><span class="time">20:30</span> Night Games</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DAY 2 -->
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-sunrise"></i> Hari 2 – Senin</h3>
+
+<div class="card p-4">
+
+<div class="timeline">
+
+<div class="timeline-item"><span class="time">05:00</span> Sholat Subuh berjamaah</div>
+
+<div class="timeline-item"><span class="time">05:30</span> Jalan pagi menikmati udara Lembang</div>
+
+<div class="timeline-item"><span class="time">06:30</span> Sarapan bersama</div>
+
+<div class="timeline-item"><span class="time">07:30</span> Outdoor Games</div>
+
+<div class="timeline-item"><span class="time">08:30</span> Free time (berenang / foto / santai)</div>
+
+<div class="timeline-item"><span class="time">10:30</span> Packing & bersih-bersih villa</div>
+
+<div class="timeline-item"><span class="time">11:30</span> Sholat Dzuhur</div>
+
+<div class="timeline-item"><span class="time">12:00</span> Check-out & perjalanan pulang</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BUDGET ESTIMATION -->
+<div class="section" data-aos="fade-up" style="display: none;">
+
+<h3><i class="bi bi-cash-stack"></i> Estimasi Budget Perjalanan</h3>
+
+<div class="card p-4">
+
+<h5>Hari 1 – Bandung</h5>
+
+<p>🚗 BBM + Tol perjalanan Jakarta → Bandung 
+<span class="price">Rp2.000.000</span></p>
+
+<p>🍽 Makan Siang Bandung (Rombongan) 
+<span class="price">Rp1.200.000</span></p>
+
+<p>☕ Snack / kopi Braga Street 
+<span class="price">Rp300.000</span></p>
+
+<p>🏡 Logistik Villa & kebutuhan dapur 
+<span class="price">Rp500.000</span></p>
+
+<p>🎲 Peralatan & hadiah games keluarga 
+<span class="price">Rp300.000</span></p>
+
+<hr>
+
+<h5>Hari 2 – Lembang</h5>
+
+<p>🥐 Sarapan bersama 
+<span class="price">Rp600.000</span></p>
+
+<p>🍜 Makan siang perjalanan pulang 
+<span class="price">Rp900.000</span></p>
+
+<p>⛽ BBM perjalanan pulang 
+<span class="price">Rp800.000</span></p>
+
+<hr>
+
+<h4 class="total">
+Total Estimasi Budget ≈ Rp6.600.000
+</h4>
+
+<p>
+Estimasi dibagi kepada <b>9 orang dewasa</b>
+</p>
+
+<p>
+Per orang ≈ <b>Rp733.000</b>
+</p>
+
+<hr>
+
+<p style="font-size:14px;color:#6c757d">
+
+<b>Catatan:</b><br>
+Biaya perjalanan ini hanya ditanggung oleh 9 orang dewasa.
+2 orang tua dan 2 remaja tidak termasuk dalam pembagian budget.
+Anak-anak juga tidak termasuk dalam pembagian biaya.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- DESTINATION -->
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-geo-alt"></i> Destinasi Perjalanan</h3>
+
+</div>
+
+
+<!-- BRAGA STREET -->
+
+<div class="section" data-aos="fade-up">
+
+<div class="card p-4">
+
+<h4>📍 Braga Street – Bandung</h4>
+
+<img
+src="https://media-cdn.tripadvisor.com/media/photo-s/0d/df/6a/ca/jl-braga.jpg"
+class="img-fluid rounded mb-3"
+loading="lazy">
+
+<p>
+Braga Street adalah jalan ikonik di pusat Kota Bandung
+dengan nuansa bangunan heritage, kafe klasik,
+street art, dan spot foto keluarga.
+</p>
+
+<div class="ratio ratio-16x9">
+
+<iframe
+src="https://maps.google.com/maps?q=braga%20street%20bandung&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- MASJID RAYA BANDUNG -->
+
+<div class="section" data-aos="fade-up">
+
+<div class="card p-4">
+
+<h4>🕌 Masjid Raya Bandung</h4>
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Masjid_Raya_Bandung_dan_Alun-alun_Bandung_%28potrait%29.jpg/500px-Masjid_Raya_Bandung_dan_Alun-alun_Bandung_%28potrait%29.jpg"
+class="img-fluid rounded mb-3"
+loading="lazy">
+
+<p>
+Masjid Raya Bandung berada di kawasan Alun-Alun Bandung
+dan menjadi salah satu ikon wisata religi terbesar
+di kota Bandung.
+</p>
+
+<div class="ratio ratio-16x9">
+
+<iframe
+src="https://maps.google.com/maps?q=masjid%20raya%20bandung&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- BONI CASTLE VILLA -->
+
+<div class="section" data-aos="fade-up">
+
+<div class="card p-4">
+
+<h4>🏡 Boni Castle Villa – Parongpong Lembang</h4>
+
+<img
+src="https://cf.bstatic.com/xdata/images/hotel/max500/598700846.jpg?k=8287a2f7e5f59a6dd53719f719e1e3bc9b3e80486d898079bb12a1394ea98311&o=&hp=1"
+class="img-fluid rounded mb-3"
+loading="lazy">
+
+<p>
+Villa tempat keluarga menginap selama liburan di kawasan
+Parongpong Lembang dengan udara sejuk dan area luas
+untuk kegiatan keluarga seperti games dan gathering.
+</p>
+
+<div class="ratio ratio-16x9">
+
+<iframe
+src="https://maps.google.com/maps?q=parongpong%20lembang&t=&z=14&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-cash-coin"></i> Budget Trip</h3>
+
+<div class="card p-4">
+
+<canvas id="budgetChart"></canvas>
+
+</div>
+
+</div>
+
+<div class="section" data-aos="fade-up">
+
+<h3><i class="bi bi-backpack"></i> Packing Checklist</h3>
+
+<div class="card p-4">
+
+<label><input type="checkbox"> Charger HP</label><br>
+<label><input type="checkbox"> Jaket Lembang</label><br>
+<label><input type="checkbox"> Obat-obatan</label><br>
+<label><input type="checkbox"> Snack Anak</label><br>
+<label><input type="checkbox"> Kamera / Tripod</label><br>
+<label><input type="checkbox"> Peralatan Games</label>
+
+</div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+AOS.init();
+
+new Swiper(".swiper",{
+loop:true,
+autoplay:{delay:3000},
+pagination:{el:".swiper-pagination"}
+});
+
+function vote(place){
+let el=document.getElementById(place.toLowerCase());
+el.innerHTML=parseInt(el.innerHTML)+1;
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progress").style.width=scrolled+"%";
+
+};
+
+let target=new Date("Mar 22, 2026").getTime();
+
+setInterval(function(){
+
+let now=new Date().getTime();
+
+let distance=target-now;
+
+let days=Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("countdown").innerHTML=
+"Trip dimulai dalam "+days+" hari";
+
+},1000);
+
+/* =========================
+WEATHER BANDUNG AUTO ICON
+========================= */
+
+function weatherIcon(code){
+
+if(code==0) return "☀️ Cerah";
+if(code<=3) return "⛅ Berawan";
+if(code<=48) return "🌫 Berkabut";
+if(code<=67) return "🌧 Hujan";
+if(code<=77) return "🌨 Salju";
+if(code<=82) return "🌦 Hujan ringan";
+if(code<=99) return "⛈ Thunderstorm";
+
+return "☁️ Cuaca";
+}
+
+async function loadWeather(){
+
+try{
+
+let url="https://api.open-meteo.com/v1/forecast?latitude=-6.9175&longitude=107.6191&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Asia%2FBangkok";
+
+let res = await fetch(url);
+let data = await res.json();
+
+let max1 = data.daily.temperature_2m_max[0];
+let min1 = data.daily.temperature_2m_min[0];
+let code1 = data.daily.weathercode[0];
+
+let max2 = data.daily.temperature_2m_max[1];
+let min2 = data.daily.temperature_2m_min[1];
+let code2 = data.daily.weathercode[1];
+
+document.getElementById("weatherBox").innerHTML =
+
+`
+<div class="row text-center">
+
+<div class="col-md-6">
+
+<h5>22 Maret</h5>
+<p style="font-size:22px">
+${weatherIcon(code1)}
+</p>
+<p>${min1}°C - ${max1}°C</p>
+
+</div>
+
+<div class="col-md-6">
+
+<h5>23 Maret</h5>
+<p style="font-size:22px">
+${weatherIcon(code2)}
+</p>
+<p>${min2}°C - ${max2}°C</p>
+
+</div>
+
+</div>
+
+<p style="font-size:13px;color:gray;margin-top:10px">
+Data cuaca otomatis diperbarui setiap membuka halaman
+</p>
+`;
+
+}catch(e){
+
+document.getElementById("weatherBox").innerHTML =
+"Weather tidak bisa dimuat";
+
+}
+
+}
+
+loadWeather();
+
+/* =========================
+BUDGET CHART
+========================= */
+
+new Chart(document.getElementById("budgetChart"), {
+
+type: "pie",
+
+data: {
+
+labels: [
+"Transport",
+"Makan",
+"Villa & Logistik",
+"Games",
+"Snack"
+],
+
+datasets: [{
+
+data: [
+2800000,
+2100000,
+500000,
+300000,
+900000
+],
+
+backgroundColor:[
+"#198754",
+"#0d6efd",
+"#ffc107",
+"#dc3545",
+"#6f42c1"
+]
+
+}]
+
+}
+
+});
+
+
+
+/* =========================
+LEAFLET MAP
+========================= */
+
+var map = L.map('map').setView([-6.889,107.610],11);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+maxZoom:19
+}).addTo(map);
+
+L.marker([-6.9175,107.6191])
+.addTo(map)
+.bindPopup("Braga Street");
+
+L.marker([-6.9219,107.6071])
+.addTo(map)
+.bindPopup("Masjid Raya Bandung");
+
+L.marker([-6.8456,107.5975])
+.addTo(map)
+.bindPopup("Boni Castle Villa");
+
+
+
+
+
+</script>
+
+</body>
+</html>
